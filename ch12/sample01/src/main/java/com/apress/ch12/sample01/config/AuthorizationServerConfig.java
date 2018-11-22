@@ -44,7 +44,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory().withClient("10101010").secret("11110000").scopes("foo", "bar")
-				.authorizedGrantTypes("client_credentials", "password", "refresh_token").accessTokenValiditySeconds(60);
+				.authorizedGrantTypes("client_credentials", "password", "refresh_token").accessTokenValiditySeconds(600);
 	}
 
 	@Bean

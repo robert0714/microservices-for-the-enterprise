@@ -59,8 +59,8 @@
     </build>
 
     <properties>
-        <camel.version>2.19.1</camel.version>
-        <spring-boot-starter.version>1.5.4.RELEASE</spring-boot-starter.version>
+        <camel.version>2.19.5</camel.version>
+        <spring-boot-starter.version>1.5.17.RELEASE</spring-boot-starter.version>
     </properties>
 
 </project>

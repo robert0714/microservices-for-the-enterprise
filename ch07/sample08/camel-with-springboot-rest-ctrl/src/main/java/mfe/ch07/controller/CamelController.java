@@ -1,4 +1,4 @@
-package mfe.ch07;
+package mfe.ch07.controller;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;

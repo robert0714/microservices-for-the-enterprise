@@ -12,17 +12,29 @@ import com.apress.ch12.sample03.model.Item;
 @RequestMapping(value = "/inventory")
 public class Inventory {
 
+//	@RequestMapping(method = RequestMethod.PUT)
+//	public ResponseEntity<?> updateItems(@RequestBody Item[] items) {
+//
+//		if (items == null || items.length == 0) {
+//			return ResponseEntity.badRequest().build();
+//		}
+//		for (Item item : items) {
+//			if (item != null) {
+//				System.out.println(item.getCode());
+//			}
+//		}
+//		return ResponseEntity.noContent().build();
+//	}
 	@RequestMapping(method = RequestMethod.PUT)
-	public ResponseEntity<?> updateItems(@RequestBody Item[] items) {
+	public void updateItems(@RequestBody Item[] items) {
 
 		if (items == null || items.length == 0) {
-			return ResponseEntity.badRequest().build();
+			 
 		}
 		for (Item item : items) {
 			if (item != null) {
 				System.out.println(item.getCode());
 			}
-		}
-		return ResponseEntity.noContent().build();
+		} 
 	}
 }

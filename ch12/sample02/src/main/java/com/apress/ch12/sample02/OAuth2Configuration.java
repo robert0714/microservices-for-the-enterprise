@@ -20,6 +20,9 @@ public class OAuth2Configuration {
 		details.setClientSecret("11110000");
 		details.setUseCurrentUri(true);
 		details.setUserAuthorizationUri("http://localhost:8443/oauth/authorize");
+		details.setGrantType("client_credentials" );
+		details.setGrantType( "password" );
+		details.setGrantType( "refresh_token");
 		details.setAccessTokenUri("http://localhost:8443/oauth/token");
 		return details;
 	}

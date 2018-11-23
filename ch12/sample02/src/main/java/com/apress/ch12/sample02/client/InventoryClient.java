@@ -17,6 +17,7 @@ public class InventoryClient {
 
 	public void updateInventory(Item[] items) {
 		URI uri = URI.create("https://localhost:10443/inventory");
+		System.out.println("call sample03");
 		restTemplate.put(uri, items);
 	}
 }

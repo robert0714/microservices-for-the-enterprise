@@ -7,4 +7,4 @@ scrape_configs:
     scrape_interval: 10s
     metrics_path: '/prometheus'
     static_configs:
-      - targets: ['10.0.0.93:9000']
+      - targets: ['localhost:9000']

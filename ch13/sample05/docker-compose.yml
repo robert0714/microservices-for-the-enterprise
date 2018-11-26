@@ -2,8 +2,10 @@ version: '3.1'
 services:
   grafana:
     image: grafana/grafana
-    ports:
-    - 3000:3000
+    container_name:  grafana
+#    ports:
+#    - 3000:3000
+    network_mode:  "host"
     volumes:
     - grafana_data:/var/lib/grafana
     environment:
@@ -12,10 +14,13 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
     depends_on:
       - prometheus
+    
   prometheus:
     image: prom/prometheus
-    ports:
-    - 9090:9090
+    container_name:  prometheus
+#    ports:
+#    - 9090:9090
+    network_mode:  "host"
     volumes:
     - ./prometheus.yml:/etc/prometheus/prometheus.yml
     - prometheus_data:/prometheus

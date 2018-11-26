@@ -1,0 +1,12 @@
+version: '2'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name:  jaeger
+    ports:
+      - 5775:5775/udp 
+      - 16686:16686
+#    network_mode:  "host"
+    environment:    
+      TZ: Asia/Taipei      
+      
